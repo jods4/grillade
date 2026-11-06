@@ -1,0 +1,36 @@
+{
+  "name": "grillade",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [ "dist" ],
+  "main": "./dist/grillade.js",
+  "module": "./dist/grillade.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/grillade.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/grillade.css": "./dist/grillade.css"
+  },
+  "scripts": {
+    "type-check": "vue-tsc --noEmit",
+    "build": "npm run type-check && vite build"
+  },
+  "dependencies": {
+    "documonster": "^0.21.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.60.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "oxfmt": "^0.77.0",
+    "typescript": "^6.0.3",
+    "unplugin-dts": "^1.1.2",
+    "vue-component-type-helpers": "^3.3.14",
+    "vue-tsc": "3.3.14",
+    "vite": "^8.3.6"
+  }
+}
