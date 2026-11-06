@@ -147,13 +147,15 @@
 </template>
 
 <script setup lang="ts" generic="T extends Data">
+  import { computed, nextTick, shallowReactive, shallowRef as sref, watch } from "vue";
+
   import { AnimBody, AnimColumn as vAnimColumn, useAnimations } from "./animation";
   import { autoSize, ColResizer, type Column, type ColumnDefinition, type Data, makeColspan } from "./columns";
-  import type { ODataFetch, ODataRequest } from "./odata";
   import { PageNav, useData } from "./data";
   import { exportExcel, fetchAllPages } from "./excel";
-  import { ItemDirective as vItem, getRowItem } from "./item";
   import i18n from "./i18n";
+  import { ItemDirective as vItem, getRowItem } from "./item";
+  import type { ODataFetch, ODataRequest } from "./odata";
   import { options } from "./options";
   import { ResizeDirective as vResize } from "./resize";
   import { addSelection } from "./selection";
@@ -161,7 +163,6 @@
   import { State } from "./state";
   import { addTree } from "./tree";
   import { useVirtual, VirtualScroller } from "./virtual";
-  import { computed, nextTick, shallowReactive, shallowRef as sref, watch } from "vue";
 
   const SortIndicatorTyped = SortIndicator<T>;
   const ColResizerTyped = ColResizer<T>;

@@ -1,8 +1,9 @@
-import { moveX } from "./animations";
+import { pauseTracking, reactiveReadArray, resetTracking } from "@vue/reactivity";
+import { toRaw, watchEffect } from "vue";
+
 import type { Column, Data } from "../columns";
 import type { State } from "../state";
-import { toRaw, watchEffect } from "vue";
-import { pauseTracking, reactiveReadArray, resetTracking } from "@vue/reactivity";
+import { moveX } from "./animations";
 
 export { AnimBody } from "./body";
 export { AnimColumn } from "./column";

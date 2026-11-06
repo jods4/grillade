@@ -1,6 +1,7 @@
+import { computed, Ref } from "vue";
+
 import type { ColumnDefinition, Data } from "./columns";
 import { options } from "./options";
-import { computed, Ref } from "vue";
 
 function buildSearchFunc<T extends Data>(search: string, columns: ColumnDefinition<T>[]) {
   const regExps = search.split(/\s+/).map(x => options.searchRegex(x));

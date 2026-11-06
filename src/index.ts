@@ -1,4 +1,5 @@
 import type { ComponentExposed } from "vue-component-type-helpers";
+
 import type { Data } from "./columns";
 import DataGrid from "./datagrid.vue";
 import "./datagrid.css";

@@ -1,6 +1,7 @@
+import { type InjectionKey, inject } from "vue";
+
 import type { Data } from "../columns";
 import type { DataGroup } from "../grouping";
-import { type InjectionKey, inject } from "vue";
 
 export interface VisibleGroup<T extends Data> {
   key?: any;

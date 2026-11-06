@@ -1,5 +1,6 @@
-import { awaitLast } from "./awaitLast";
 import { type Ref, watchEffect } from "vue";
+
+import { awaitLast } from "./awaitLast";
 
 export function asyncComputed<T>(f: () => MaybePromise<T>): {
   current: Ref<T | undefined>;

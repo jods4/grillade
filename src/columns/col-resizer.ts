@@ -1,7 +1,8 @@
-import type { Data } from ".";
-import type { Column } from "./column";
-import type { State } from "../state";
 import { h } from "vue";
+
+import type { Data } from ".";
+import type { State } from "../state";
+import type { Column } from "./column";
 
 export default function render<T extends Data>(
   props: { column: Column<T>; state: State<T> },

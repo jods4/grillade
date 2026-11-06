@@ -1,8 +1,9 @@
-import type { Column, Data } from "../columns";
-import type { SortColumn, SortDescriptor } from "./sort-column";
-import type { State } from "../state";
-import { computed, type ComputedRef, type Ref, shallowReactive } from "vue";
 import { shallowReadArray } from "@vue/reactivity";
+import { computed, type ComputedRef, type Ref, shallowReactive } from "vue";
+
+import type { Column, Data } from "../columns";
+import type { State } from "../state";
+import type { SortColumn, SortDescriptor } from "./sort-column";
 
 export { default as SortIndicator } from "./sort-indicator";
 export type { SortColumn, SortDescriptor };

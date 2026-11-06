@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "arrowParens": "avoid",
+  "endOfLine": "crlf",
+  "htmlWhitespaceSensitivity": "ignore",
+  "trailingComma": "all",
+  "vueIndentScriptAndStyle": true,
+  "printWidth": 120,
+  "sortImports": {
+    "newlinesBetween": false,
+    "groups": [
+      "type-import",
+      ["value-builtin", "value-external"],
+      { "newlinesBetween": true },
+      [ "type-internal", "value-internal" ],
+      [ "type-parent", "type-sibling", "type-index", "value-parent", "value-sibling", "value-index"],
+      "unknown"
+    ]
+  },
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "Services",
+    "System/odata-query.ts",
+    "*.json"
+  ]
+}

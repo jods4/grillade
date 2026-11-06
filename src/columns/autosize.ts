@@ -1,6 +1,7 @@
+import { queuePostFlushCb } from "vue";
+
 import type { Data } from ".";
 import type { Column } from "./column";
-import { queuePostFlushCb } from "vue";
 
 export function autoSize<T extends Data>(table: HTMLTableElement, columns: Column<T>[], hasData: boolean) {
   queuePostFlushCb(() => {

@@ -1,9 +1,10 @@
+import { computed, type ComputedRef, type Ref, shallowRef, toRaw } from "vue";
+
 import type { Column, ColumnDefinition, Data } from "./columns";
 import { buildPredicate } from "./search";
 import { buildComparer, type SortDescriptor, type SortColumn } from "./sort";
 import type { State } from "./state";
 import workletURL from "./tree-paint?worker&url";
-import { computed, type ComputedRef, type Ref, shallowRef, toRaw } from "vue";
 
 CSS.paintWorklet.addModule(workletURL);
 

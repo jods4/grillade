@@ -1,6 +1,7 @@
+import { markRaw, type Ref, shallowRef } from "vue";
+
 import type { Data } from "./columns";
 import type { VirtualState } from "./virtual/state";
-import { markRaw, type Ref, shallowRef } from "vue";
 
 export class DataGroup<T extends Data> {
   allRows: T[];

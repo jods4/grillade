@@ -1,6 +1,7 @@
 import { h } from "vue";
-import type { SortColumn } from "./sort-column";
+
 import type { Column, Data } from "../columns";
+import type { SortColumn } from "./sort-column";
 
 export default function render<T extends Data>(props: { sort?: SortColumn<T>[]; column?: Column<T> }) {
   const { sort, column } = props as Required<typeof props>;

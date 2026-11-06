@@ -1,6 +1,7 @@
-import type { Data } from ".";
 import type { Style } from "documonster/excel";
 import type { ComponentOptions, FunctionalComponent, StyleValue } from "vue";
+
+import type { Data } from ".";
 
 export type ColumnFormatter<V, T> = (props: { data: T; value: V }) => any;
 

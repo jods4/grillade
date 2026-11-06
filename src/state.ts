@@ -1,7 +1,8 @@
+import { toRaw } from "vue";
+
 import type { Column, Data } from "./columns";
 import { options } from "./options";
 import type { SortColumn } from "./sort";
-import { toRaw } from "vue";
 
 class ColumnState {
   // Note that keys are based on original indexes in grid definition, e.g. key: 'user-3'.

@@ -1,5 +1,6 @@
-import { fade, moveY } from "./animations";
 import { Comment, defineComponent, Fragment, onUpdated, renderSlot, VNode, watch } from "vue";
+
+import { fade, moveY } from "./animations";
 
 // Flatten fragments in VDOM
 function* iterateRows(nodes: VNode<HTMLElement> | VNode<HTMLElement>[]): Iterable<VNode<HTMLElement>> {

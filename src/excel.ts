@@ -1,8 +1,9 @@
+import type { Workbook } from "documonster/excel";
+
 import type { Column, ColumnDefinition, Data } from "./columns";
 import type { ODataFunction } from "./data";
 import type { ODataRequest } from "./odata";
 import type { SortDescriptor, SortColumn } from "./sort";
-import type { Workbook } from "documonster/excel";
 
 export const hooks = {
   // Maximum number of rows to fetch and include in Excel export
@@ -94,7 +95,7 @@ export async function exportExcel<T extends Data>(
     for (const { cellStyle } of excelCols) {
       colIndex++;
       if (!cellStyle) continue;
-      
+
       for (let r = 2; r <= Worksheet.rowCount(sheet); r++) {
         const style = cellStyle(Cell.getValue(sheet, r, colIndex), entities![colIndex - 2]);
         if (style) Cell.setStyle(sheet, r, colIndex, style);

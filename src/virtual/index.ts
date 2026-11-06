@@ -1,7 +1,8 @@
+import { computed, queuePostFlushCb, type MaybeRef, provide, reactive, unref, watch, watchEffect, markRaw } from "vue";
+
 import type { Column, Data } from "../columns";
 import { type DataGroup, groupRows, updateGroupOffsets } from "../grouping";
 import { injectKey, type VirtualState } from "./state";
-import { computed, queuePostFlushCb, type MaybeRef, provide, reactive, unref, watch, watchEffect, markRaw } from "vue";
 
 export { default as VirtualScroller } from "./scroller.vue";
 

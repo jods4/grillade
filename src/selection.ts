@@ -1,6 +1,7 @@
+import { computed, Ref, h, watch } from "vue";
+
 import type { Column, Data } from "./columns";
 import type { DataGroup } from "./grouping";
-import { computed, Ref, h, watch } from "vue";
 
 export function addSelection<T extends Data>(
   columns: Column<T>[],

@@ -1,3 +1,5 @@
+import { computed, type ComputedRef, type Ref, shallowRef as sref } from "vue";
+
 import type { ColumnDefinition, Data } from "./columns";
 import type { ODataFetch, ODataRequest, ODataResponse } from "./odata";
 import { options } from "./options";
@@ -6,7 +8,6 @@ import { localSort, type SortDescriptor, type SortColumn } from "./sort";
 import type { State } from "./state";
 import { flattenTree } from "./tree";
 import { asyncComputed, awaitLast } from "./utils";
-import { computed, type ComputedRef, type Ref, shallowRef as sref } from "vue";
 
 type DataFunction<T> = () => MaybePromise<T[]>;
 export type ODataFunction<T> = (query?: ODataRequest<T>) => Promise<ODataResponse<T>>;
