@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "type": "module",
   "files": [ "dist" ],
-  "main": "./dist/grillade.js",
-  "module": "./dist/grillade.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/grillade.js",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./dist/grillade.css": "./dist/grillade.css"
+    "./grillade.css": "./dist/grillade.css",
+    "./utils": {
+      "import": "./dist/utils.js",
+      "types": "./dist/utils.d.ts"
+    }
   },
   "scripts": {
     "type-check": "vue-tsc --noEmit",

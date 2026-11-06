@@ -10,13 +10,16 @@ export default defineConfig({
     target: "esnext",
     emptyOutDir: true,
     lib: {
-      entry: resolve("src/index.ts"),
+      entry: {
+        index: resolve("src/index.ts"),
+        utils: resolve("src/utils/index.ts"),
+      },
       name: "grillade",
-      fileName: "grillade",
       formats: ["es"],
     },
     rolldownOptions: {
-      external: ["documonster/excel", "vue", "vue-router"],
+      // Exact matches only, regex eliminates all sub-paths of vue/... and @vue/... scoped packages
+      external: ["documonster/excel", "vue", /^@?vue\//],
     },
   },
 });

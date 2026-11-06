@@ -9,7 +9,8 @@ export { getRowItem } from "./item";
 export { default as i18n } from "./i18n";
 export { configure } from "./options";
 
-export type { ColumnDefinition, ColumnFormatter, Data } from "./columns";
+export type { Column, ColumnDefinition, ColumnExtensions, ColumnFormatter, Data } from "./columns";
+export type { DataFunction, ODataFunction, FetchData } from "./data";
 export type { TreeNode } from "./tree";
 export type { State } from "./state";
 

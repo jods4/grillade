@@ -1,5 +1,5 @@
 export { autoSize } from "./autosize";
-export { type ColumnDefinition, type ColumnFormatter, type Column, makeColspan } from "./column";
+export { type ColumnDefinition, type ColumnExtensions, type ColumnFormatter, type Column, makeColspan } from "./column";
 export { default as ColResizer } from "./col-resizer";
 
 export interface Data {

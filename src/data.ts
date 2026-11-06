@@ -9,7 +9,7 @@ import type { State } from "./state";
 import { flattenTree } from "./tree";
 import { asyncComputed, awaitLast } from "./utils";
 
-type DataFunction<T> = () => MaybePromise<T[]>;
+export type DataFunction<T> = () => MaybePromise<T[]>;
 export type ODataFunction<T> = (query?: ODataRequest<T>) => Promise<ODataResponse<T>>;
 export type FetchData<T> = DataFunction<T> | ODataFunction<T>;
 

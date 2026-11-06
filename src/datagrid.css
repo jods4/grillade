@@ -1,4 +1,4 @@
-@layer components {
+@layer data-grid {
   .dg-wrapper {
     position: relative;
     overflow: hidden;
